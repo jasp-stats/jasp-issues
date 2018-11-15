@@ -5,6 +5,11 @@ labels:
 
 ---
 
+<!--- Give a short and clear description of your enhancement request --> 
+* Enhancement:
+* Purpose:
+* Use-case:
+
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
