@@ -24,4 +24,6 @@ assignees: ''
 <!--- A note from the developers:
 If possible please attach your data and/or JASP file to the issue, this makes solving the bug a lot easier. If you would prefer to not make your data publicly available then you could also mail it to us.
 Note that github requires you to zip the file to upload it here.
+
+If you didn't feel all fields from this template are necessary for your issue please take the time to remove them from the issue. 
 --->
