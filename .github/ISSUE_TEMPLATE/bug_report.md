@@ -6,12 +6,13 @@ labels: ''
 assignees: ''
 
 ---
+
 <!--- Please fill in the following fields: --->
 * JASP version:
 <!-- An OS or operating system is the basic software that makes your computer work, like Windows, MacOS or Linux. -->
 * OS name and version:
 * Analysis: 
-* Bug description:
+* Bug description: <!--- Please add the JASP file. Add a dropbox link or rename .jasp to .zip and drag-and-drop it in here-->
 * Expected behaviour:
 
 <!--- Steps to reproduce means, what actions should we take in JASP to reproduce the bug you encountered? --->
