@@ -26,7 +26,6 @@ body:
   - type: input
     id: commit-hash
     attributes:
-      label: Nightly's Commit
       description: If you are using a nightly build, please mention the commit hash.
       placeholder: "e9f3d9f223ff67345d3613381b3c3ebc70de142f"
     validations:
