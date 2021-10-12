@@ -58,8 +58,8 @@ body:
       label: What OS are you seeing the problem on?
       description: Please mention the name and version of the Operation System that you are using?
       placeholder: "e.g., Window 10, macOS Big Sur 11.6"
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: bug-description
     attributes:
