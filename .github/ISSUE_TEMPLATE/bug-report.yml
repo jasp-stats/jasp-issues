@@ -103,5 +103,5 @@ body:
            required: true
          - label: I have included a JASP file that causes the crash/bug, if any.
            required: true
-         - lable: I have accurately describet describe the bug, and steps to reproduce it.
+         - label: I have accurately describet describe the bug, and steps to reproduce it.
            required: true
