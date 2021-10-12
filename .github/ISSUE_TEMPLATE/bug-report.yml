@@ -23,6 +23,13 @@ body:
         - 0.15 (Development)
     validations:
       required: true
+  - type: input
+    id: commit-hash
+    attributes:
+      label: If you are using a nightly build, please mention the commit hash.
+      placeholder: "e9f3d9f223ff67345d3613381b3c3ebc70de142f"
+    validations:
+      required: true
   - type: dropdown
     id: jasp-analysis
     attributes:
@@ -103,5 +110,5 @@ body:
            required: true
          - label: I have included a JASP file that causes the crash/bug, if any.
            required: true
-         - label: I have accurately describet describe the bug, and steps to reproduce it.
+         - label: I have accurately described the bug, and steps to reproduce it.
            required: true
