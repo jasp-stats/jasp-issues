@@ -24,9 +24,9 @@ body:
     validations:
       required: true
   - type: input
-    id: commit-hash
+    id: commit-id
     attributes:
-      label: Nightly's Commit
+      label: Commit ID
       description: If you are using a nightly build, please mention the commit hash.
       placeholder: "e9f3d9f223ff67345d3613381b3c3ebc70de142f"
     validations:
@@ -61,6 +61,14 @@ body:
         - jaspProphet
         - jaspProcessControl
         - jaspCircular
+    validations:
+      required: false
+  - type: input
+    id: jasp-analysis
+    attributes:
+      label: What analysis are you seeing the problem on?
+      description: Please mention the name of the analysis or method that the causes the issue.
+      placeholder: "TTest"
     validations:
       required: false
   - type: input
