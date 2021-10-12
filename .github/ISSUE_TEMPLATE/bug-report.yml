@@ -74,7 +74,10 @@ body:
     attributes:
       label: Steps to Reproduce
       description: Can you reproduce the bug? If so, please let us know what steps you take to reproduce this bug.
-      placeholder: "1. 2. 3."
+      placeholder: |
+        1.
+        2.
+        3.
     validations:
       required: true
   - type: textarea
@@ -96,3 +99,6 @@ body:
       label: Log (if any)
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: bash
+
+
+        
