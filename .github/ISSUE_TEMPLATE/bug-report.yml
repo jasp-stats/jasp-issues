@@ -94,7 +94,7 @@ body:
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: bash
   - type: checkboxes    
-     id: terms    
+     id: final-checklist
      attributes:    
        label: Final Checklist
        description: Please take a moment and make sure that you have filled all fields as accurately as possible; otherwise, we will not be able to track and resolve your issue.
