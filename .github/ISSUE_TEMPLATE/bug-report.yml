@@ -1,0 +1,96 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please try to fill the following fields as accurately as possible.
+  - type: dropdown
+    id: jasp-version
+    attributes:
+      label: JASP Version
+      description: What version of JASP are you running?
+      options:
+        - 1.2
+        - 1.3
+        - 1.4
+        - 1.5
+        - 1.5 (Nightly)
+        - 1.5 (Development)
+    validations:
+      required: true
+  - type: dropdown
+    id: jasp-analysis
+    attributes:
+      label: JASP Module
+      description:  What JASP analysis are you seeing the problem on?
+      multiple: true
+      options:
+        - jaspDescriptives
+        - jaspAnova
+        - jaspFactor
+        - jaspFrequencies
+        - jaspRegression
+        - jaspTTests
+        - jaspMixedModels
+        - jaspAudit
+        - jaspBain
+        - jaspNetwork
+        - jaspSem
+        - jaspMachineLearning
+        - jaspSummaryStatistics
+        - jaspMetaAnalysis
+        - jaspDistributions
+        - jaspEquivalenceTTests
+        - jaspJags
+        - jaspReliability
+        - jaspVisualModeling
+        - jaspLearnBayes
+        - jaspProphet
+        - jaspProcessControl
+        - jaspCircular
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: What OS are you seeing the problem on?
+      description: Please mention the name and version of the Operation System that you are using?
+      placeholder: "e.g., Window 10, macOS Big Sur 11.6"
+      validations:
+        required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: Please tell us what happened. In addition, please drag-and-drop any related files, or screenshot (if any) to this area.
+      placeholder: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected Behaviour
+      description: Please tell us what should have happened instead of the bug. In addition, you can include any images or files showcasing the correct behaviour.
+      placeholder: "A bug should not happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log (if any)
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+    render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        
