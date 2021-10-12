@@ -81,7 +81,7 @@ body:
     attributes:
       label: Log (if any)
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-    render: shell
+    render: bash
   - type: checkboxes
     id: terms
     attributes:
@@ -90,7 +90,4 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-  - type: markdown
-    attributes:
-      value: |
         
