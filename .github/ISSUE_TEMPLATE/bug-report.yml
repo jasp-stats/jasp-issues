@@ -94,10 +94,14 @@ body:
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: bash
   - type: checkboxes
-     id: final-checklist
-     attributes:
-       label: Final Checklist
-       description: Please take a moment and make sure that you have filled all fields as accurately as possible; otherwise, we will not be able to track and resolve your issue.
-       options:   
-          - label: I have included a screenshot showcasing the issue, if any.
-            required: true
+    id: final-checklist
+    attributes:
+      label: Final Checklist
+      description: Please take a moment and make sure that you have filled all fields as accurately as possible; otherwise, we will not be able to track and resolve your issue.
+      options:   
+         - label: I have included a screenshot showcasing the issue, if any.
+           required: true
+         - label: I have included a JASP file that causes the crash/bug, if any.
+           required: true
+         - lable: I have accurately describet describe the bug, and steps to reproduce it.
+           required: true
