@@ -62,7 +62,7 @@ body:
         - jaspProcessControl
         - jaspCircular
     validations:
-      required: true
+      required: false
   - type: input
     id: os
     attributes:
