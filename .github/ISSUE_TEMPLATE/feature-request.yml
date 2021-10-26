@@ -10,21 +10,21 @@ body:
   - type: input
     id: feature-short-description
     attributes:
-      label: Feature Description
+      label: Description
       description: 
     validations:
       required: false
   - type: input
     id: feature-purpose
     attributes:
-      label: Feature Purpose
+      label: Purpose
       description: 
     validations:
       required: false
   - type: input
     id: feature-use-case
     attributes:
-      label: Feature Usecase
+      label: Usecase
       description: 
     validations:
       required: false
