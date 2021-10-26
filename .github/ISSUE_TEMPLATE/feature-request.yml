@@ -1,0 +1,58 @@
+name: Feature Request
+description: Request a new feature, or an enhancement to an existing functionality
+labels: Feature Request
+title: "[Feature Request]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request form! Please try to describe your request as detailed as possible.
+  - type: input
+    id: feature-short-description
+    attributes:
+      label: Feature Description
+      description: 
+    validations:
+      required: false
+  - type: input
+    id: feature-purpose
+    attributes:
+      label: Feature Purpose
+      description: 
+    validations:
+      required: false
+  - type: input
+    id: feature-use-case
+    attributes:
+      label: Feature Usecase
+      description: 
+    validations:
+      required: false
+  - type: input
+    id: feature-is-related-to-a-problem
+    attributes:
+      label: Is your feature request related to a problem? 
+      description: A clear and concise description of what the problem is.
+    validations:
+      required: false
+  - type: input
+    id: feature-solution-description
+    attributes:
+      label: Describe the solution you would like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: false
+  - type: input
+    id: feature-alternative
+    attributes:
+      label: Describe alternatives that you have considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+  - type: textarea
+    id: feature-additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false
