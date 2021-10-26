@@ -24,7 +24,7 @@ body:
   - type: input
     id: feature-use-case
     attributes:
-      label: Usecase
+      label: Use-case
       description: 
     validations:
       required: false
