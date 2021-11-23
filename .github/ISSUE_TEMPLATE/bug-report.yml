@@ -19,8 +19,9 @@ body:
         - 0.13.1
         - 0.14
         - 0.15
-        - 0.15 (Nightly)
-        - 0.15 (Development)
+        - 0.16
+        - 0.16 (Nightly)
+        - 0.16 (Development)
     validations:
       required: true
   - type: input
