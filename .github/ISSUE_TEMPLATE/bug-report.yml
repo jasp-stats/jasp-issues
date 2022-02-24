@@ -116,7 +116,10 @@ body:
     id: log
     attributes:
       label: Log (if any)
-      description: Please copy and paste any relevant log output here. This will be automatically formatted into code, so no need for backticks. Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.
+      description: 
+        Please copy and paste any relevant log output here. This will be automatically formatted into code, so no need for backticks. 
+        
+        **Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.**
       render: bash
   - type: checkboxes
     id: final-checklist
