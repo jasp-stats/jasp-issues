@@ -117,7 +117,7 @@ body:
     attributes:
       label: Log (if any)
       description: 
-        Please upload your Log files by dropping them into the area below, and add any necessary notes if necessary.
+        Please upload your Log files by dropping them into the area below, and add any information notes if necessary.
         
         **Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.**
   - type: checkboxes
