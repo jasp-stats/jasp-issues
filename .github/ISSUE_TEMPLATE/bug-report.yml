@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! If this is your first time reporting a bug, please read our [guide](https://jasp-stats.org/2018/03/29/request-feature-report-bug-jasp/) first. 
+        Thanks for taking the time to fill out this bug report! If this is your first time reporting a bug, please read our [guide](https://jasp-stats.org/2018/03/29/request-feature-report-bug-jasp/) first.
   - type: dropdown
     id: jasp-version
     attributes:
@@ -107,9 +107,9 @@ body:
       label: Steps to Reproduce
       description: Can you reproduce the bug? If so, please let us know what steps you take to reproduce this bug.
       value: |
-        1. 
-        2. 
-        3. 
+        1.
+        2.
+        3.
         ...
     validations:
       required: true
@@ -117,7 +117,7 @@ body:
     id: log
     attributes:
       label: Log (if any)
-      description: 
+      description:
         Please upload your Log files by dropping them into the area below, and add any information notes if necessary.
         
         **Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.**
@@ -126,7 +126,7 @@ body:
     attributes:
       label: Final Checklist
       description: Please take a moment and make sure that you have filled all fields as accurately as possible; otherwise, we will not be able to track and resolve your issue.
-      options:   
+      options:
          - label: I have included a screenshot showcasing the issue, if any.
            required: true
          - label: I have included a JASP file that causes the crash/bug, if any.
