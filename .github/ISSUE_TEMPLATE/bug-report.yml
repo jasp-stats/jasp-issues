@@ -41,29 +41,30 @@ body:
       description:  What JASP analysis are you seeing the problem on?
       multiple: true
       options:
-        - jaspDescriptives
-        - jaspAnova
-        - jaspFactor
-        - jaspFrequencies
-        - jaspRegression
-        - jaspTTests
-        - jaspMixedModels
-        - jaspAudit
-        - jaspBain
-        - jaspNetwork
-        - jaspSem
-        - jaspMachineLearning
-        - jaspSummaryStatistics
-        - jaspMetaAnalysis
-        - jaspDistributions
-        - jaspEquivalenceTTests
-        - jaspJags
-        - jaspReliability
-        - jaspVisualModeling
-        - jaspLearnBayes
-        - jaspProphet
-        - jaspProcessControl
-        - jaspCircular
+        - Others
+        - ANOVA
+        - Audit
+        - Bain
+        - Circular
+        - Descriptives
+        - Distributions
+        - Equivalence T-Tests
+        - Factor
+        - Frequencies
+        - JAGS
+        - Learn Bayes
+        - Machine Learning
+        - Meta Analysis
+        - Mixed Models
+        - Network
+        - Process Control
+        - Prophet
+        - Regression
+        - Reliability
+        - SEM
+        - Summary Statistics
+        - T-Tests
+        - Visual Modeling
     validations:
       required: false
   - type: input
@@ -71,7 +72,7 @@ body:
     attributes:
       label: What analysis are you seeing the problem on?
       description: Please mention the name of the analysis or method that the causes the issue.
-      placeholder: "TTest"
+      placeholder: "One Sample T-Test"
     validations:
       required: false
   - type: input
@@ -79,7 +80,7 @@ body:
     attributes:
       label: What OS are you seeing the problem on?
       description: Please mention the name and version of the Operation System that you are using?
-      placeholder: "e.g., Window 10, macOS Big Sur 11.6"
+      placeholder: "e.g., Window 10, macOS Intel Big Sur 11.6"
     validations:
       required: true
   - type: textarea
@@ -127,9 +128,9 @@ body:
       label: Final Checklist
       description: Please take a moment and make sure that you have filled all fields as accurately as possible; otherwise, we will not be able to track and resolve your issue.
       options:
-         - label: I have included a screenshot showcasing the issue, if any.
+         - label: I have included a screenshot showcasing the issue, if possible.
            required: true
-         - label: I have included a JASP file that causes the crash/bug, if any.
+         - label: I have included a JASP file or data file that causes the crash/bug, if applicable.
            required: true
          - label: I have accurately described the bug, and steps to reproduce it.
            required: true
