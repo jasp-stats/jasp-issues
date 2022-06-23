@@ -1,2 +1,81 @@
-jaspAudit:
-    'Audit'
+# Modules
+jaspAnova:
+    '\#\#\# JASP Module\s+,*.*(ANOVA).*\s+\#\#\#'
+
+jaspBain:
+    '\#\#\# JASP Module\s+,*.*(Bain).*\s+\#\#\#'
+
+jaspCircular:
+    '\#\#\# JASP Module\s+,*.*(Circular).*\s+\#\#\#'
+
+jaspDescriptives:
+    '\#\#\# JASP Module\s+,*.*(Descriptives).*\s+\#\#\#'
+
+jaspDistributions:
+    '\#\#\# JASP Module\s+,*.*(Distributions).*\s+\#\#\#'
+
+jaspEquivalenceTTests:
+    '\#\#\# JASP Module\s+,*.*(Equivalence T-Tests).*\s+\#\#\#'
+
+jaspFactor:
+    '\#\#\# JASP Module\s+,*.*(Factor).*\s+\#\#\#'
+
+jaspFrequencies:
+    '\#\#\# JASP Module\s+,*.*(Frequencies).*\s+\#\#\#'
+
+jaspJags:
+    '\#\#\# JASP Module\s+,*.*(JAGS).*\s+\#\#\#'
+
+jaspLearnBayes:
+    '\#\#\# JASP Module\s+,*.*(Learn Bayes).*\s+\#\#\#'
+
+jaspMachineLearning:
+    '\#\#\# JASP Module\s+,*.*(Machine Learning).*\s+\#\#\#'
+
+jaspMetaAnalysis:
+    '\#\#\# JASP Module\s+,*.*(Meta Analysis).*\s+\#\#\#'
+
+jaspMixedModels:
+    '\#\#\# JASP Module\s+,*.*(Mixed Models).*\s+\#\#\#'
+
+jaspNetwork:
+    '\#\#\# JASP Module\s+,*.*(Network).*\s+\#\#\#'
+
+jaspProcessControl:
+    '\#\#\# JASP Module\s+,*.*(Process Control).*\s+\#\#\#'
+
+jaspProphet:
+    '\#\#\# JASP Module\s+,*.*(Prophet).*\s+\#\#\#'
+
+jaspRegression:
+    '\#\#\# JASP Module\s+,*.*(Regression).*\s+\#\#\#'
+
+jaspReliability:
+    '\#\#\# JASP Module\s+,*.*(Reliability).*\s+\#\#\#'
+
+jaspSem:
+    '\#\#\# JASP Module\s+,*.*(SEM).*\s+\#\#\#'
+
+jaspSummaryStatistics:
+    '\#\#\# JASP Module\s+,*.*(Summary Statistics).*\s+\#\#\#'
+
+jaspTTests:
+    '\#\#\# JASP Module\s+,*.*(T-Tests).*\s+\#\#\#'
+
+jaspVisualModeling:
+    '\#\#\# JASP Module\s+,*.*(Visual Modeling).*\s+\#\#\#'
+
+
+# OS:
+"OS: macOS":
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS).*\s+\#\#\#/i'
+
+"OS: ARM":
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(ARM|Silicon|M1).*\s+\#\#\#/i'
+
+"OS: Windows":
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows).*\s+\#\#\#/i'
+
+"OS: Linux / Flatpak":
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Linux|Flatpak|Ubuntu|Debian|Fedora).*\s+\#\#\#/i'
+
