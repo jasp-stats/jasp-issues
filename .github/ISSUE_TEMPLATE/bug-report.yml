@@ -41,7 +41,7 @@ body:
       description:  What JASP analysis are you seeing the problem on?
       multiple: true
       options:
-        - Other
+        - No Module
         - ANOVA
         - Audit
         - Bain
@@ -65,6 +65,7 @@ body:
         - Summary Statistics
         - T-Tests
         - Visual Modeling
+        - Other
     validations:
       required: false
   - type: input
@@ -75,12 +76,26 @@ body:
       placeholder: "One Sample T-Test"
     validations:
       required: false
-  - type: input
+  - type: dropdown
     id: os
     attributes:
       label: What OS are you seeing the problem on?
       description: Please mention the name and version of the Operation System that you are using?
-      placeholder: "e.g., Window 10, macOS Intel Big Sur 11.6"
+      multiple: true
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS Intel
+        - macOS M1 (Silicon)
+        - Linux
+        - Flatpak
+        - Ubuntu
+        - Debian
+        - Fedora
+        - Arch
+        - Manjaro
+        - PopOs
+        - Other
     validations:
       required: true
   - type: textarea
@@ -90,7 +105,7 @@ body:
       description: |
         Please tell us what happened.
         
-        Note: You can attach images or log files by clicking this area to highlight it and then dragging files in. If you would like to upload a JASP file, please compress your (.jasp) file before uploading it to GitHub. In addition, if you would prefer to not make your data publicly available, you can send your files directly to us, issues@jasp-stats.org.
+        Note: You can attach images or log files by clicking this area to highlight it and then dragging files in. If you upload a JASP file, you need to compress your .jasp-file before uploading it to GitHub (aka as a .zip-file). In addition, if you would prefer to not make your data publicly available, you can send your files directly to us, issues@jasp-stats.org.
       placeholder: "A bug happened!"
     validations:
       required: true
@@ -130,7 +145,7 @@ body:
       options:
          - label: I have included a screenshot showcasing the issue, if possible.
            required: true
-         - label: I have included a JASP file or data file that causes the crash/bug, if applicable.
+         - label: I have included a JASP file (zipped) or data file that causes the crash/bug, if applicable.
            required: true
          - label: I have accurately described the bug, and steps to reproduce it.
            required: true
