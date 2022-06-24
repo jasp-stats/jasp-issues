@@ -67,15 +67,15 @@ jaspVisualModeling:
 
 
 # OS:
-"OS: macOS":
-    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS).*\s+\#\#\#/i'
+"OS: macOS Intel":
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS Intel).*\s+\#\#\#/i'
 
-"OS: ARM":
+"OS: macOS M1":
     '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(ARM|Silicon|M1).*\s+\#\#\#/i'
 
 "OS: Windows":
     '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows).*\s+\#\#\#/i'
 
 "OS: Linux / Flatpak":
-    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Linux|Flatpak|Ubuntu|Debian|Fedora).*\s+\#\#\#/i'
+    '/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Linux|Flatpak|Ubuntu|Debian|Fedora|Arch|Manjaro|PopOs).*\s+\#\#\#/i'
 
