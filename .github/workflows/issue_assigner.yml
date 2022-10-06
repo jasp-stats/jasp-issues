@@ -1,0 +1,23 @@
+name: "Assign Issue"
+on:
+  issues:
+    types:
+        - opened
+        - reopened
+        - edited
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: juliuspf/issue-action@v0.0.1
+        with:
+          title-or-body: "body"
+          parameters: '[
+            {"keywords": ["Reliability"],
+                "assignees": ["juliuspf"]},
+            {"keywords": ["Factor"],
+                "assignees": ["juliuspf"]},
+            {"keywords": ["Regression"],
+                "assignees": ["vandenman"]}]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
