@@ -2,9 +2,9 @@ name: "Assign Issue"
 on:
   issues:
     types:
-        - opened
-        - reopened
-        - edited
+      - opened
+      - reopened
+      - edited
 
 jobs:
   test:
