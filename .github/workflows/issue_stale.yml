@@ -14,13 +14,13 @@ jobs:
           operations-per-run: 100
           close-issue-label: 'Stale-closed'
           
-          # labels stale all issues with a waiting for requester label
-          #any-of-labels: 'waiting for requester'
-          #days-before-stale: 42
-          #days-before-close: 28
-          
-          # labels stale all issues except the ones with a Feature Request label
-          exempt-issue-labels: 'Feature Request'
-          days-before-stale: 182
+          # labels stale all issues with a waiting for requester label:
+          any-of-labels: 'waiting for requester'
+          days-before-stale: 42
           days-before-close: 28
+          
+          # # labels stale all issues except the ones with a Feature Request label
+          # exempt-issue-labels: 'Feature Request'
+          # days-before-stale: 182
+          # days-before-close: 28
           
