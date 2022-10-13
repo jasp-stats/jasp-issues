@@ -1,3 +1,9 @@
+
+# via https://github.com/actions/stale
+# 1. label all issues that have a waiting-for-requester label as stale 
+#    after 42 days (6 weeks)
+# 2. close stale issues after 28 days of inactivity
+
 name: 'Close stale issues and PRs'
 on:
   schedule:

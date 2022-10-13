@@ -41,11 +41,13 @@ body:
       description:  What JASP analysis are you seeing the problem on?
       multiple: true
       options:
-        - No Module
+        - Unrelated
         - ANOVA
         - Audit
         - Bain
+        - Bsts
         - Circular
+        - Cochrane
         - Descriptives
         - Distributions
         - Equivalence T-Tests
@@ -65,7 +67,7 @@ body:
         - Summary Statistics
         - T-Tests
         - Visual Modeling
-        - Other
+        - Other Module
     validations:
       required: false
   - type: input
