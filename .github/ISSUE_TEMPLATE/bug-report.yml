@@ -69,7 +69,7 @@ body:
         - Visual Modeling
         - Other Module
     validations:
-      required: false
+      required: true
   - type: input
     id: jasp-analysis
     attributes:
