@@ -4,7 +4,7 @@
 # 2. define operating system keyword patterns, and the designated label
 # 3. get the info about the issue
 # 4. check if module keyword pattern matches text in the issue, 
-# looping over all patterns
+#   looping over all patterns:
 #   - if pattern is found, label the issue, and assign the maintainer
 #   - if the pattern is not found, check if the label or assignee for the pattern
 #     is attached to the issue and remove them
@@ -25,7 +25,7 @@ on:
       - edited
 
 jobs:
-  Label-and-Assign:
+  Bug-label-and-assign:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.issue.title, 'Bug') }}
     steps:
@@ -33,5 +33,16 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./.github/script.js');
+            const script = require('./.github/scripts/bug_labelAssign.js');
             script({github, context});
+
+  Feature-label-and-assign:
+      runs-on: ubuntu-latest
+      if: ${{ contains(github.event.issue.title, 'Feature Request') }}
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/github-script@v6
+          with:
+            script: |
+              const script = require('./.github/scripts/feature_labelAssign.js');
+              script({github, context});

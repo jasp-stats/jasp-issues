@@ -8,7 +8,7 @@ on:
       - opened
 
 jobs:
-  Test-stuff:
+  First-response:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.issue.title, 'Bug') }}
     steps:
@@ -16,6 +16,6 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./.github/script.js');
+            const script = require('./.github/scripts/bug_firstResponse.js');
             script({github, context});
 

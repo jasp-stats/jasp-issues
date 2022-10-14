@@ -13,10 +13,11 @@ module.exports = async function ({github, context}) {
   if (!regex.test(body)) {
     const comment = "@" + issue.data.user.login +
       ", thanks for taking the time to create this issue. \
-      If possible, please upload in here (" + issue.data.html_url +
+      If possible (and applicable), please upload in here (" 
+      + issue.data.html_url +
       ") a screenshot showcasing the problem, and/or \
       a compressed (zipped) .jasp file or the data file \
-      that causes the issue. If you would prefer to not make your \
+      that causes the issue. If you would prefer not to make your \
       data publicly available, you can send your file(s) directly to us,\
       issues@jasp-stats.org" ;
 

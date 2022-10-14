@@ -4,72 +4,60 @@ module.exports = async function ({github, context}) {
   // define an array of keyword triples, including the label and 
   // the maintainer to assign
   const moduleKeywords = [
-    [/\#\#\# JASP Module\s+,*.*(Unrelated).*\s+\#\#\#/, 
-    "", "boutinb"],
-    [/\#\#\# JASP Module\s+,*.*(ANOVA).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(ANOVA).*\s+\#\#\#/, 
     "Module: jaspAnova", "JohnnyDoorn"],
-    [/\#\#\# JASP Module\s+,*.*(Audit).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Audit).*\s+\#\#\#/, 
     "Module: jaspAudit", "koenderks"],
-    [/\#\#\# JASP Module\s+,*.*(Bain).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Bain).*\s+\#\#\#/, 
     "Module: jaspBain", "koenderks"],
-    [/\#\#\# JASP Module\s+,*.*(Bsts).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Bsts).*\s+\#\#\#/, 
     "Module: jaspBsts", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Circular).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Circular).*\s+\#\#\#/, 
     "Module: jaspCircular", "Kucharssim"],
-    [/\#\#\# JASP Module\s+,*.*(Cochrane).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Cochrane).*\s+\#\#\#/, 
     "Module: jaspCochrane", "FBartos"],
-    [/\#\#\# JASP Module\s+,*.*(Descriptives).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Descriptives).*\s+\#\#\#/,
     "Module: jaspDescriptives", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Distributions).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Distributions).*\s+\#\#\#/,
     "Module: jaspDistributions", "Kucharssim"],
-    [/\#\#\# JASP Module\s+,*.*(Equivalence T-Tests).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Equivalence T-Tests).*\s+\#\#\#/,
     "Module: jaspEquivalenceTTests", "Jillderon"],
-    [/\#\#\# JASP Module\s+,*.*(Factor).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Factor).*\s+\#\#\#/,
     "Module: jaspFactor", "juliuspf"],
-    [/\#\#\# JASP Module\s+,*.*(Frequencies).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Frequencies).*\s+\#\#\#/,
     "Module: jaspFrequencies", "FBartos"],
-    [/\#\#\# JASP Module\s+,*.*(JAGS).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(JAGS).*\s+\#\#\#/, 
     "Module: jaspJags", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Learn Bayes).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Learn Bayes).*\s+\#\#\#/, 
     "Module: jaspLearnBayes", "Kucharssim"],
-    [/\#\#\# JASP Module\s+,*.*(Machine Learning).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Machine Learning).*\s+\#\#\#/,
     "Module: jaspMachineLearning", "koenderks"],
-    [/\#\#\# JASP Module\s+,*.*(Meta Analysis).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Meta Analysis).*\s+\#\#\#/,
     "Module: jaspMetaAnalysis", "FBartos"],
-    [/\#\#\# JASP Module\s+,*.*(Mixed Models).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Mixed Models).*\s+\#\#\#/,
     "Module: jaspMetaAnalysis", "FBartos"],
-    [/\#\#\# JASP Module\s+,*.*(Network).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Network).*\s+\#\#\#/,
     "Module: jaspNetwork", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Quality Control).*\s+\#\#\#/,
-    "Module: jaspQualityControl", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Prophet).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Prophet).*\s+\#\#\#/,
     "Module: jaspProphet", "Kucharssim"],
-    [/\#\#\# JASP Module\s+,*.*(Regression).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Quality Control).*\s+\#\#\#/,
+    "Module: jaspQualityControl", "vandenman"],
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Regression).*\s+\#\#\#/,
     "Module: jaspRegression", "Kucharssim"],
-    [/\#\#\# JASP Module\s+,*.*(Reliability).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Reliability).*\s+\#\#\#/, 
     "Module: jaspReliability", "juliuspf"],
-    [/\#\#\# JASP Module\s+,*.*(SEM).*\s+\#\#\#/, 
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(SEM).*\s+\#\#\#/, 
     "Module: jaspSem", "LSLindeloo"],
-    [/\#\#\# JASP Module\s+,*.*(Summary Statistics).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Summary Statistics).*\s+\#\#\#/,
     "Module: jaspSummaryStatistics", "akashrajkn"],
-    [/\#\#\# JASP Module\s+,*.*(T-Tests).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(T-Tests).*\s+\#\#\#/,
     "Module: jaspTTests", "vandenman"],
-    [/\#\#\# JASP Module\s+,*.*(Visual Modeling).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Visual Modeling).*\s+\#\#\#/,
     "Module: jaspVisualModeling", "dustinfife"],
-    [/\#\#\# JASP Module\s+,*.*(Other Module).*\s+\#\#\#/,
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(Other Module).*\s+\#\#\#/,
     "", "Kucharssim"],
-  ];
-
-  // get the operating system keywords together
-  const osKeywords = [
-    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS Intel).*\s+\#\#\#/,
-    "OS: macOS Intel"],
-    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS Silicon).*\s+\#\#\#/,
-    "OS: macOS Silicon"],
-    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows 10|Windows 11).*\s+\#\#\#/,
-    "OS: Windows"], 
-    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Linux|Flatpak|Ubuntu|Debian|Fedora|Arch|Manjaro|PopOs).*\s+\#\#\#/,
-    "OS: Linux / Flatpak"]
+    [/\#\#\# Is your feature request related to a JASP module\?\s+,*.*(_No response_).*\s+\#\#\#/,
+    "", "AlexanderLyNL"]
   ];
 
   // get the issue info
@@ -133,34 +121,6 @@ module.exports = async function ({github, context}) {
           assignees: [
             word[2]
           ]
-        });
-      }
-    }
-  }
-
-  // test if OS keyword is in issue body
-  for (const word of osKeywords) {
-
-    let found = word[0].test(body);
-
-    // label
-    if (found) {
-      github.rest.issues.addLabels({
-        issue_number: context.issue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        labels: [
-          word[1]
-        ]
-      });
-    }
-    else { // is there no match but the label is already set? then remove it
-      if (labelNames.includes(word[1])) {
-        github.rest.issues.removeLabel({
-          issue_number: context.issue.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          name: word[1]
         });
       }
     }
