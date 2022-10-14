@@ -27,6 +27,7 @@ on:
 jobs:
   Label-and-Assign:
     runs-on: ubuntu-latest
+    if: ${{ contains(github.event.issue.title, 'Bug') }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/github-script@v6
