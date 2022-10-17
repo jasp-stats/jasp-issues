@@ -66,8 +66,10 @@ module.exports = async function ({github, context}) {
     "OS: macOS Intel"],
     [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(macOS Silicon).*\s+\#\#\#/,
     "OS: macOS Silicon"],
-    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows 10|Windows 11).*\s+\#\#\#/,
-    "OS: Windows"], 
+    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows 10).*\s+\#\#\#/,
+    "OS: Windows 10"], 
+    [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Windows 11).*\s+\#\#\#/,
+    "OS: Windows 11"], 
     [/\#\#\# What OS are you seeing the problem on\?\s+,*.*(Linux|Flatpak|Ubuntu|Debian|Fedora|Arch|Manjaro|PopOs).*\s+\#\#\#/,
     "OS: Linux / Flatpak"]
   ];
