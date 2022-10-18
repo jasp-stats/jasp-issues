@@ -42,6 +42,7 @@ body:
       description:  Which JASP module is it?
       multiple: true
       options:
+        - Unrelated
         - ANOVA
         - Audit
         - Bain

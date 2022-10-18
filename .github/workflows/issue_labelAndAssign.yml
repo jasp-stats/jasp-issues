@@ -29,20 +29,24 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.issue.title, 'Bug') }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.5.0
       - uses: actions/github-script@v6
         with:
           script: |
+            const keyFun = require('./.github/scripts/keywords.js');
+            const keywords = keyFun();
             const script = require('./.github/scripts/bug_labelAssign.js');
-            script({github, context});
+            script({github, context}, keywords);
 
   Feature-label-and-assign:
       runs-on: ubuntu-latest
       if: ${{ contains(github.event.issue.title, 'Feature Request') }}
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v2.5.0
         - uses: actions/github-script@v6
           with:
             script: |
+              const keyFun = require('./.github/scripts/keywords.js');
+              const keywords = keyFun();
               const script = require('./.github/scripts/feature_labelAssign.js');
-              script({github, context});
+              script({github, context}, keywords);
