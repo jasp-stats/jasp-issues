@@ -97,6 +97,7 @@ body:
         - Arch
         - Manjaro
         - PopOs
+        - ChromeOS
         - Other
     validations:
       required: true
