@@ -1,0 +1,21 @@
+
+# if no file is uploaded, create a comment
+
+name: First Response
+on:
+  issues:
+    types: 
+      - opened
+
+jobs:
+  First-response:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.issue.title, 'Bug') }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const script = require('./.github/scripts/bug_firstResponse.js');
+            script({github, context});
+

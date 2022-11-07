@@ -35,6 +35,40 @@ body:
       description: A clear and concise description of what the problem is.
     validations:
       required: false
+  - type: dropdown
+    id: jasp-module
+    attributes:
+      label: Is your feature request related to a JASP module?
+      description:  Which JASP module is it?
+      multiple: true
+      options:
+        - Unrelated
+        - ANOVA
+        - Audit
+        - Bain
+        - Circular
+        - Descriptives
+        - Distributions
+        - Equivalence T-Tests
+        - Factor
+        - Frequencies
+        - JAGS
+        - Learn Bayes
+        - Machine Learning
+        - Meta Analysis
+        - Mixed Models
+        - Network
+        - Prophet
+        - Quality Control
+        - Regression
+        - Reliability
+        - SEM
+        - Summary Statistics
+        - T-Tests
+        - Visual Modeling
+        - Other
+    validations:
+      required: false
   - type: input
     id: feature-solution-description
     attributes:
