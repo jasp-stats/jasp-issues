@@ -30,11 +30,10 @@ module.exports = async function ({github, context}, keywords) {
     // create the regex to match with, case insensitive
     var regex = new RegExp(regexModule1 + words[0] + regexModule2, "i");
     let found = regex.test(body);
-    console.log(words[1]);
-    console.log(words[1].length);
+
     // label and assign someone
     if (found) {
-      // in case there is no label for a certain response
+      // checks if there is actually a label specified in the keywords
       if (words[1].length > 0) {
         github.rest.issues.addLabels({
           issue_number: context.issue.number,
@@ -45,7 +44,7 @@ module.exports = async function ({github, context}, keywords) {
           ]
         });
       }
-      // in case there is no assignee for a certain response
+      // checks if there is actually an assignee specified in the keywords
       if (words[2].length > 0) {
         github.rest.issues.addAssignees({
           issue_number: context.issue.number,

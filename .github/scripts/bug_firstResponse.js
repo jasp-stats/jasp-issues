@@ -9,17 +9,17 @@ module.exports = async function ({github, context}) {
   
   const body = issue.data.body;
   // possible files endings for a screenshot or file upload:
-  const regex = /\#\#\# Bug Description\s+.*\s+.*(\.png|\.jpeg|\.jpg|\.pdf|\.zip|\.rar|.csv).*\s+\#\#\#/;
+  const regex = /\#\#\# Bug Description\s+.*\s+.*(\.png|\.jpeg|\.jpg|\.pdf|\.zip|\.rar|\.csv|\.mov|\.gif|\.mp4|\.avi).*\s+\#\#\#/;
   if (!regex.test(body)) {
     const comment = "@" + issue.data.user.login +
       ", thanks for taking the time to create this issue. \
-      If possible (and applicable), please upload in here (" 
+      If possible (and applicable), please upload to the issues website (" 
       + issue.data.html_url +
       ") a screenshot showcasing the problem, and/or \
       a compressed (zipped) .jasp file or the data file \
       that causes the issue. If you would prefer not to make your \
       data publicly available, you can send your file(s) directly to us,\
-      issues@jasp-stats.org" ;
+      issues@jasp-stats.org. If ";
 
     github.rest.issues.createComment({
       issue_number: context.issue.number,

@@ -23,7 +23,7 @@ jobs:
           # labels stale all issues with a waiting for requester label:
           any-of-labels: 'waiting for requester'
           days-before-stale: 42
-          days-before-close: 28
+          days-before-close: 42
           
           # # labels stale all issues except the ones with a Feature Request label
           # exempt-issue-labels: 'Feature Request'
