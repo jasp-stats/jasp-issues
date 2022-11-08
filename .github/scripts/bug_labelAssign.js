@@ -25,7 +25,7 @@ module.exports = async function ({github, context}, keywords) {
   for (assignee of issue.data.assignees) {
     assigneeNames.push(assignee.login);
   }
-console.log(body);
+
   // test if module keyword is in issue body
   const regexModule1 = "\\#\\#\\# JASP Module\\s+,*.*("
   const regexModule2 = ").*\\s+\\#\\#\\#";
