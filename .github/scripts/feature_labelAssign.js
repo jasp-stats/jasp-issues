@@ -30,25 +30,32 @@ module.exports = async function ({github, context}, keywords) {
     // create the regex to match with, case insensitive
     var regex = new RegExp(regexModule1 + words[0] + regexModule2, "i");
     let found = regex.test(body);
-
+    console.log(words[1]);
+    console.log(words[1].length);
     // label and assign someone
     if (found) {
-      github.rest.issues.addLabels({
-        issue_number: context.issue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        labels: [
-          words[1]
-        ]
-      });
-      github.rest.issues.addAssignees({
-        issue_number: context.issue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        assignees: [
-          words[2]
-        ]
-      });
+      // in case there is no label for a certain response
+      if (words[1].length > 0) {
+        github.rest.issues.addLabels({
+          issue_number: context.issue.number,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          labels: [
+            words[1]
+          ]
+        });
+      }
+      // in case there is no assignee for a certain response
+      if (words[2].length > 0) {
+        github.rest.issues.addAssignees({
+          issue_number: context.issue.number,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          assignees: [
+            words[2]
+          ]
+        });
+      }
     }
     else { // is there no match but the label is already set? then remove it
       if (labelNames.includes(words[1])) {
