@@ -33,22 +33,28 @@ module.exports = async function ({github, context}, keywords) {
 
     // label and assign someone
     if (found) {
-      github.rest.issues.addLabels({
-        issue_number: context.issue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        labels: [
-          words[1]
-        ]
-      });
-      github.rest.issues.addAssignees({
-        issue_number: context.issue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        assignees: [
-          words[2]
-        ]
-      });
+      // checks if there is actually a label specified in the keywords
+      if (words[1].length > 0) {
+        github.rest.issues.addLabels({
+          issue_number: context.issue.number,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          labels: [
+            words[1]
+          ]
+        });
+      }
+      // checks if there is actually an assignee specified in the keywords
+      if (words[2].length > 0) {
+        github.rest.issues.addAssignees({
+          issue_number: context.issue.number,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          assignees: [
+            words[2]
+          ]
+        });
+      }
     }
     else { // is there no match but the label is already set? then remove it
       if (labelNames.includes(words[1])) {
