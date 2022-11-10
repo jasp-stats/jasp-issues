@@ -15,6 +15,7 @@ module.exports = async function ({github, context}, keywords) {
   // get the issue body
   const body = issue.data.body;
 
+  console.log(issue);
   // get labels and assignees
   var labelNames = [];
   for (label of issue.data.labels) {
