@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/stale@v6
         with:
-          stale-issue-message: 'This issue or pull request will be automatically closed in 42 days due to inactivity. Feel free to leave a comment if you believe this is still relevant.'
+          stale-issue-message: 'This issue will be automatically closed in 42 days due to inactivity. Feel free to leave a comment if you believe this is still relevant.'
           close-issue-message: 'Automatically closed due to inactivity.'
           operations-per-run: 100
           close-issue-label: 'Stale-closed'
