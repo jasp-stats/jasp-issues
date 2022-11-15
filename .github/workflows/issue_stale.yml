@@ -25,8 +25,5 @@ jobs:
           days-before-stale: 42
           days-before-close: 42
           
-          # # labels stale all issues except the ones with a Feature Request label
-          # exempt-issue-labels: 'Feature Request'
-          # days-before-stale: 182
-          # days-before-close: 28
+          labels-to-remove-when-unstale: 'waiting for requester'
           
