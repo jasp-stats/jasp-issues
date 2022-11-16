@@ -1,14 +1,9 @@
 
 # The script consists of several steps:
-# 1. define module keyword patterns, the designated label and assignee
-# 2. define operating system keyword patterns, and the designated label
-# 3. get the info about the issue
-# 4. check if module keyword pattern matches text in the issue, 
-#   looping over all patterns:
-#   - if pattern is found, label the issue, and assign the maintainer
-#   - if the pattern is not found, check if the label or assignee for the pattern
-#     is attached to the issue and remove them
-# 5. do 4 but with OS keyword patterns
+# 1. Add the duplicate label is a comment is posted containing 
+# "duplicate of"
+# 2. Remove the waiting for requester label, if the requester posts a comment
+# in an issue with the label.
 
 # so far this workflow works best with the bug_template. 
 # some resources: https://github.com/actions/github-script
@@ -23,11 +18,10 @@ on:
       - created
 
 jobs:
-  Label-duplicate:
-    if: ${{ !github.event.issue.pull_request }} # only on issues, not PRs
+  Label-as-duplicate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.5.0
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
@@ -38,7 +32,7 @@ jobs:
     if: ${{ contains(github.event.issue.labels.*.name, 'waiting for requester') }}    
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.5.0
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
