@@ -18,16 +18,6 @@ on:
       - created
 
 jobs:
-  Label-as-duplicate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            const script = require('./.github/scripts/duplicateLabel.js');
-            script({github, context});
-
   Remove-requester-label:
     if: ${{ contains(github.event.issue.labels.*.name, 'waiting for requester') }}    
     runs-on: ubuntu-latest
