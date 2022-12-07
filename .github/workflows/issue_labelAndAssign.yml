@@ -22,14 +22,13 @@ on:
     types: 
       - opened
       - reopened
-      - edited
 
 jobs:
   Bug-label-and-assign:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.issue.title, 'Bug') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
     steps:
-      - uses: actions/checkout@v2.5.0
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
@@ -40,9 +39,9 @@ jobs:
 
   Feature-label-and-assign:
       runs-on: ubuntu-latest
-      if: ${{ contains(github.event.issue.title, 'Feature Request') }}
+      if: ${{ contains(github.event.issue.labels.*.name, 'Feature Request') }}
       steps:
-        - uses: actions/checkout@v2.5.0
+        - uses: actions/checkout@v3
         - uses: actions/github-script@v6
           with:
             script: |
