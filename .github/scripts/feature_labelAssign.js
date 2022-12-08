@@ -56,25 +56,5 @@ module.exports = async function ({github, context}, keywords) {
         });
       }
     }
-    else { // is there no match but the label is already set? then remove it
-      if (labelNames.includes(words[1])) {
-        github.rest.issues.removeLabel({
-          issue_number: context.issue.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          name: words[1]
-        });
-      } // same for assignees
-      if (assigneeNames.includes(words[2])) {
-        github.rest.issues.removeAssignees({
-          issue_number: context.issue.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          assignees: [
-            words[2]
-          ]
-        });
-      }
-    }
   }
 }

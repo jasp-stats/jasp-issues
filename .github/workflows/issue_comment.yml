@@ -1,0 +1,32 @@
+
+# The script consists of several steps:
+# 1. Add the duplicate label is a comment is posted containing 
+# "duplicate of"
+# 2. Remove the waiting for requester label, if the requester posts a comment
+# in an issue with the label.
+
+# so far this workflow works best with the bug_template. 
+# some resources: https://github.com/actions/github-script
+#                 https://octokit.github.io/rest.js/v19
+#                 https://docs.github.com/en/rest
+
+
+name: Commented Issue
+on:
+  issue_comment:
+    types: 
+      - created
+
+jobs:
+  Remove-requester-label:
+    if: ${{ contains(github.event.issue.labels.*.name, 'waiting for requester') }}    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const script = require('./.github/scripts/removeRequesterLabel.js');
+            script({github, context});
+
+

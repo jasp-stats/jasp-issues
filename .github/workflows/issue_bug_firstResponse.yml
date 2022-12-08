@@ -10,9 +10,9 @@ on:
 jobs:
   First-response:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.issue.title, 'Bug') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/github-script@v6
         with:
           script: |
