@@ -19,6 +19,7 @@ jobs:
           close-issue-message: 'Automatically closed due to inactivity.'
           operations-per-run: 1000
           close-issue-label: 'Stale-closed'
+          close-issue-reason: 'completed'
           
           # labels stale all issues with a waiting for requester label:
           any-of-labels: 'waiting for requester'
