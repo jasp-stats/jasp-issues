@@ -13,12 +13,13 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v6
+      - uses: actions/stale@v7
         with:
           stale-issue-message: 'This issue will be automatically closed in 42 days due to inactivity. Feel free to leave a comment if you believe this is still relevant.'
           close-issue-message: 'Automatically closed due to inactivity.'
-          operations-per-run: 100
+          operations-per-run: 1000
           close-issue-label: 'Stale-closed'
+          close-issue-reason: 'completed'
           
           # labels stale all issues with a waiting for requester label:
           any-of-labels: 'waiting for requester'
