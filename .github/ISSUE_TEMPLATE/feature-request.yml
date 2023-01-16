@@ -46,7 +46,9 @@ body:
         - ANOVA
         - Audit
         - Bain
+        - Bsts
         - Circular
+        - Cochrane
         - Descriptives
         - Distributions
         - Equivalence T-Tests
