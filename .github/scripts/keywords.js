@@ -19,7 +19,7 @@ module.exports = function () {
       ["Learn Bayes", "Module: jaspLearnBayes", "Kucharssim"],
       ["Machine Learning","Module: jaspMachineLearning", "koenderks"],
       ["Meta Analysis","Module: jaspMetaAnalysis", "FBartos"],
-      ["Mixed Models","Module: jaspMetaAnalysis", "FBartos"],
+      ["Mixed Models","Module: jaspMixedModels", "FBartos"],
       ["Network","Module: jaspNetwork", "vandenman"],
       ["Prophet","Module: jaspProphet", "Kucharssim"],
       ["Quality Control","Module: jaspQualityControl", "vandenman"],
@@ -30,7 +30,7 @@ module.exports = function () {
       ["T-Tests","Module: jaspTTests", "vandenman"],
       ["Visual Modeling","Module: jaspVisualModeling", "dustinfife"],
       ["Other Module", "", "Kucharssim"],
-      ["_No response_", "", "AlexanderLyNL"]
+      ["_No response_", "", "EJWagenmakers"]
     ], 
     oses: [
       ["macOS Intel", "OS: macOS Intel"],
