@@ -45,6 +45,7 @@ body:
       multiple: true
       options:
         - Unrelated
+        - Acceptance Sampling
         - ANOVA
         - Audit
         - Bain
