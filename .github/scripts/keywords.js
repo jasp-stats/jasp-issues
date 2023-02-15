@@ -4,6 +4,7 @@ module.exports = function () {
   const keywords = {
     modules: [
       ["Unrelated", "", "boutinb"],
+      ["Acceptance Sampling", "Module: jaspAcceptanceSampling", "pankajrsingla"],
       ["ANOVA", "Module: jaspAnova", "JohnnyDoorn"],
       ["Audit", "Module: jaspAudit", "koenderks"],
       ["Bain", "Module: jaspBain", "koenderks"],
