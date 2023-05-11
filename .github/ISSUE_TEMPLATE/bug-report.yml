@@ -50,8 +50,8 @@ body:
         - Audit
         - Bain
         - Bsts
-        - Circular
-        - Cochrane
+        - Circular Statistics
+        - Cochrane Meta-Analyses
         - Descriptives
         - Distributions
         - Equivalence T-Tests
@@ -63,6 +63,7 @@ body:
         - Meta Analysis
         - Mixed Models
         - Network
+        - Power
         - Prophet
         - Quality Control
         - Regression
