@@ -74,7 +74,7 @@ body:
         - Summary Statistics
         - T-Tests
         - Visual Modeling
-        - Other Module
+        - Other
     validations:
       required: true
   - type: input
