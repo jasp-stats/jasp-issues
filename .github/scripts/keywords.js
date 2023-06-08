@@ -31,7 +31,7 @@ module.exports = function () {
       ["Summary Statistics","Module: jaspSummaryStatistics", "akashrajkn"],
       ["T-Tests","Module: jaspTTests", "vandenman"],
       ["Visual Modeling","Module: jaspVisualModeling", "dustinfife"],
-      ["Other Module", "", "Kucharssim"],
+      ["Other", "", "Kucharssim"],
       ["_No response_", "", "EJWagenmakers"]
     ], 
     oses: [

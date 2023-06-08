@@ -10,7 +10,7 @@ module.exports = async function ({github, context}) {
   const body = issue.data.body;
   // if any of these string are in the issue body, then there was a user upload, 
   // the first string covers all the image/video files
-  const regex = /user-images\.githubusercontent\.com|\.zip|\.rar|\.csv|\.sav|\.xlsx|\.xls|\.csv2/;
+  const regex = /(!\[.*?\])|\.zip|\.rar|\.csv|\.sav|\.xlsx|\.xls|\.csv2/;
   if (!regex.test(body)) {
     const comment = "@" + issue.data.user.login +
       ", thanks for taking the time to create this issue. \
