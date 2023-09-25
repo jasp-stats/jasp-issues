@@ -24,7 +24,7 @@ module.exports = function () {
       ["Network","Module: jaspNetwork", "vandenman"],
       ["Power", "Module: jaspPower", "jansim"],
       ["Prophet","Module: jaspProphet", "Kucharssim"],
-      ["Quality Control","Module: jaspQualityControl", "vandenman"],
+      ["Quality Control","Module: jaspQualityControl", "JTPetter"],
       ["Regression","Module: jaspRegression", "Kucharssim"],
       ["Reliability", "Module: jaspReliability", "juliuspfadt"],
       ["SEM", "Module: jaspSem", "juliuspfadt"],
