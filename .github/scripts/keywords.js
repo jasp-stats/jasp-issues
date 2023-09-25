@@ -27,7 +27,7 @@ module.exports = function () {
       ["Quality Control","Module: jaspQualityControl", "vandenman"],
       ["Regression","Module: jaspRegression", "Kucharssim"],
       ["Reliability", "Module: jaspReliability", "juliuspfadt"],
-      ["SEM", "Module: jaspSem", "LSLindeloo"],
+      ["SEM", "Module: jaspSem", "juliuspfadt"],
       ["Summary Statistics","Module: jaspSummaryStatistics", "akashrajkn"],
       ["T-Tests","Module: jaspTTests", "vandenman"],
       ["Visual Modeling","Module: jaspVisualModeling", "dustinfife"],
