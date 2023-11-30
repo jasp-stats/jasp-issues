@@ -57,6 +57,7 @@ body:
         - Frequencies
         - JAGS
         - Learn Bayes
+        - Learn Stats
         - Machine Learning
         - Meta Analysis
         - Mixed Models
@@ -66,9 +67,12 @@ body:
         - Quality Control
         - Regression
         - Reliability
+        - Robust T-Tests
         - SEM
+        - Survival
         - Summary Statistics
         - T-Tests
+        - Time Series
         - Visual Modeling
         - Other
     validations:
