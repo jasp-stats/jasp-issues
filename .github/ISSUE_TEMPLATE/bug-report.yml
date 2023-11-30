@@ -13,6 +13,7 @@ body:
       label: JASP Version
       description: What version of JASP are you running?
       options:
+        - 0.18.2
         - 0.18.1
         - 0.18.0
         - 0.17.3
@@ -64,6 +65,7 @@ body:
         - Frequencies
         - JAGS
         - Learn Bayes
+        - Learn Stats
         - Machine Learning
         - Meta Analysis
         - Mixed Models
@@ -73,9 +75,12 @@ body:
         - Quality Control
         - Regression
         - Reliability
+        - Robust T-Tests
         - SEM
+        - Survival
         - Summary Statistics
         - T-Tests
+        - Time Series
         - Visual Modeling
         - Other
     validations:
