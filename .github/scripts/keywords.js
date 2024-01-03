@@ -23,7 +23,7 @@ module.exports = function () {
       ["Meta Analysis","Module: jaspMetaAnalysis", "FBartos"],
       ["Mixed Models","Module: jaspMixedModels", "FBartos"],
       ["Network","Module: jaspNetwork", "vandenman"],
-      ["PowerA", "Module: jaspPowerA", "jansimA"],
+      ["Power", "Module: jaspPower", "jansim"],
       ["Predictive Analytics", "Module: jaspPredictiveAnalytics", "petersen-f"],
       ["Process", "Module: jaspProcess", "maltelueken"],
       ["Prophet","Module: jaspProphet", "Kucharssim"],
