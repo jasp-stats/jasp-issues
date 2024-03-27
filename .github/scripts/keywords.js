@@ -17,7 +17,7 @@ module.exports = function () {
       ["Factor","Module: jaspFactor", "juliuspfadt"],
       ["Frequencies","Module: jaspFrequencies", "FBartos"],
       ["JAGS", "Module: jaspJags", "vandenman"],
-      ["Learn Bayes", "Module: jaspLearnBayes", "Kucharssim"],
+      ["Learn Bayes", "Module: jaspLearnBayes", "juliuspfadt"],
       ["Learn Stats", "Module: jaspLearnStats", "JTPeter"],
       ["Machine Learning","Module: jaspMachineLearning", "koenderks"],
       ["Meta Analysis","Module: jaspMetaAnalysis", "FBartos"],
@@ -28,7 +28,7 @@ module.exports = function () {
       ["Process", "Module: jaspProcess", "maltelueken"],
       ["Prophet","Module: jaspProphet", "Kucharssim"],
       ["Quality Control","Module: jaspQualityControl", "JTPetter"],
-      ["Regression","Module: jaspRegression", "Kucharssim"],
+      ["Regression","Module: jaspRegression", "juliuspfadt"],
       ["Reliability", "Module: jaspReliability", "juliuspfadt"],
       ["Robust T-Tests","Module: jaspRobustTTests", "FBartos"],
       ["SEM", "Module: jaspSem", "juliuspfadt"],
@@ -37,7 +37,7 @@ module.exports = function () {
       ["T-Tests","Module: jaspTTests", "vandenman"],
       ["Time Series", "Module: jaspTimeSeries", "sophieberkhout"],
       ["Visual Modeling","Module: jaspVisualModeling", "dustinfife"],
-      ["Other", "", "Kucharssim"],
+      ["Other", "", "boutinb"],
       ["_No response_", "", "EJWagenmakers"]
     ], 
     oses: [
