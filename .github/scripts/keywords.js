@@ -17,7 +17,7 @@ module.exports = function () {
       ["Factor","Module: jaspFactor", "juliuspfadt"],
       ["Frequencies","Module: jaspFrequencies", "FBartos"],
       ["JAGS", "Module: jaspJags", "vandenman"],
-      ["Learn Bayes", "Module: jaspLearnBayes", "FBartos"],
+      ["Learn Bayes", "Module: jaspLearnBayes", "EJWagenmakers"],
       ["Learn Stats", "Module: jaspLearnStats", "JTPeter"],
       ["Machine Learning","Module: jaspMachineLearning", "koenderks"],
       ["Meta Analysis","Module: jaspMetaAnalysis", "FBartos"],
