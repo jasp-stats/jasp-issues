@@ -8,7 +8,7 @@ module.exports = function () {
       ["ANOVA", "Module: jaspAnova", "JohnnyDoorn"],
       ["Audit", "Module: jaspAudit", "koenderks"],
       ["Bain", "Module: jaspBain", "koenderks"],
-      ["Bsts", "Module: jaspBsts", "vandenman"],
+      ["Bsts", "Module: jaspBsts", "hrgodmann"],
       ["Circular Statistics", "Module: jaspCircular", "Kucharssim"],
       ["Cochrane Meta-Analyses", "Module: jaspCochrane", "FBartos"],
       ["Descriptives","Module: jaspDescriptives", "vandenman"],
