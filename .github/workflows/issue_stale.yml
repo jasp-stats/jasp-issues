@@ -22,9 +22,9 @@ jobs:
           close-issue-reason: 'completed'
           
           # labels stale all issues with a waiting for requester label:
-          any-of-labels: 'waiting for requester'
+          any-of-labels: 'Waiting for requester'
           days-before-stale: 42
           days-before-close: 42
           
-          labels-to-remove-when-unstale: 'waiting for requester'
+          labels-to-remove-when-unstale: 'Waiting for requester'
           

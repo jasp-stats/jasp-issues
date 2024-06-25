@@ -24,7 +24,7 @@ module.exports = async function ({github, context}) {
           issue_number: context.issue.number,
           owner: context.repo.owner,
           repo: context.repo.repo,
-          name: "waiting for requester"
+          name: "Waiting for requester"
         });
   };
 
