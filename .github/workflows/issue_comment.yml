@@ -19,7 +19,7 @@ on:
 
 jobs:
   Remove-requester-label:
-    if: ${{ contains(github.event.issue.labels.*.name, 'waiting for requester') }}    
+    if: ${{ contains(github.event.issue.labels.*.name, 'Waiting for requester') }}    
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
