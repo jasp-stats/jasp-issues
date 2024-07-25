@@ -159,6 +159,12 @@ body:
         Please upload your Log files by dropping them into the area below, and add any information notes if necessary.
         
         **Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.**
+  - type: textarea
+    id: debug-info
+    attributes:
+      label: More Debug Information
+      description: Are you using a JASP version >= 0.19 now? Please open the "About" window if you can access JASP,then click the "copy debug information" button to get debug info. 
+      placeholder: Paste debug infomation here.
   - type: checkboxes
     id: final-checklist
     attributes:
