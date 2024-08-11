@@ -13,7 +13,7 @@ body:
       label: Description
       description: 
     validations:
-      required: false
+      required: true
   - type: input
     id: feature-purpose
     attributes:
