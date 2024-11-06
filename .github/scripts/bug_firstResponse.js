@@ -1,5 +1,3 @@
-
-
 module.exports = async function ({github, context}) {
   const issue = await github.rest.issues.get({
     issue_number: context.issue.number,
@@ -16,7 +14,7 @@ module.exports = async function ({github, context}) {
       ", thanks for taking the time to create this issue. \
       If possible (and applicable), please upload to the issue website (" 
       + issue.data.html_url +
-      ") a screenshot showcasing the problem, and/or \
+      ", attaching to an email does not work) a screenshot showcasing the problem, and/or \
       a compressed (zipped) .jasp file or the data file \
       that causes the issue. If you would prefer not to make your \
       data publicly available, you can send your file(s) directly to us,\
@@ -27,6 +25,13 @@ module.exports = async function ({github, context}) {
       owner: context.repo.owner,
       repo: context.repo.repo,
       body: comment
+    });
+
+    github.rest.issues.addLabels({
+      issue_number: context.issue.number,
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      labels: ["Waiting for requester"]
     });
   };
 }
