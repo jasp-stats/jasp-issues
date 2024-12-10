@@ -8,6 +8,8 @@ module.exports = function () {
       ["ANOVA", "Module: jaspAnova", "JohnnyDoorn"],
       ["Audit", "Module: jaspAudit", "koenderks"],
       ["Bain", "Module: jaspBain", "koenderks"],
+      ["Bayes Factor Functions", "Module: jaspBFF", "FBartos"],
+      ["BFPack", "Module: jaspBFPack", "juliuspfadt"],
       ["Bsts", "Module: jaspBsts", "hrgodmann"],
       ["Circular Statistics", "Module: jaspCircular", "Kucharssim"],
       ["Cochrane Meta-Analyses", "Module: jaspCochrane", "FBartos"],
