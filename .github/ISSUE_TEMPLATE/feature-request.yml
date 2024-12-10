@@ -47,6 +47,8 @@ body:
         - ANOVA
         - Audit
         - Bain
+        - Bayes Factor Functions
+        - BFPack
         - Bsts
         - Circular Statistics
         - Cochrane Meta-Analyses
