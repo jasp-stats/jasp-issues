@@ -47,7 +47,8 @@ module.exports = function () {
       ["macOS Silicon", "OS: macOS Silicon"],
       ["Windows 10", "OS: Windows 10"], 
       ["Windows 11", "OS: Windows 11"], 
-      ["Linux|Flatpak|Ubuntu|Debian|Fedora|Arch|Manjaro|PopOs|ChromeOS", "OS: Linux / Flatpak"]
+      ["Linux|Flatpak|Ubuntu|Debian|Fedora|Arch|Manjaro|PopOs", "OS: Linux / Flatpak"],
+      ["ChromeOS", "OS: ChromeOS"]
     ]
   };
   return keywords;
