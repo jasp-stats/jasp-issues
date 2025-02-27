@@ -8,7 +8,7 @@ on:
       - opened
 
 jobs:
-  First-response:
+  First-response-bug:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
     steps:
@@ -18,4 +18,14 @@ jobs:
           script: |
             const script = require('./.github/scripts/bug_firstResponse.js');
             script({github, context});
-
+  
+  First-response-crash:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.issue.labels.*.name, 'Crash') }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const script = require('./.github/scripts/crash_firstResponse.js');
+            script({github, context});
