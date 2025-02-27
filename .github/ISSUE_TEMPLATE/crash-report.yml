@@ -66,7 +66,11 @@ body:
     attributes:
       label: Is there a specific analysis that caused the crash?
       description: Please mention the name of the analysis or method that the causes the issue.
+<<<<<<< HEAD
       placeholder: One Sample T-Test
+=======
+      placeholder: "One Sample T-Test"
+>>>>>>> 0af87c1 (add a crash template, and remove redundancies)
     validations:
       required: false
   - type: textarea
