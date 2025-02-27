@@ -1,0 +1,99 @@
+name: Crash Report
+description: File a crash report
+labels: Crash
+title: "[Crash]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this crash report! If this is your first time reporting an issue, please read our [guide](https://jasp-stats.org/2018/03/29/request-feature-report-bug-jasp/) first.
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Please fill the system information into this field. If you have arrived here via the crash reporter in JASP, this will be filled automatically. If not, go to JASP > About > Copy Debug Information.
+      placeholder: "JASP Version: 0.19.3 (Apple Silicon) | Build Branch: 0.19.3 | Build Date: Jan 3 2025 12:51:39 (Netherlands) | Last Commit: c8710df5442149527b0692cc1367ea5b3c982d04 | OS: macOS Sequoia 15.3 (darwin 24.3.0, arm64) | Install Path: /Applications/JASP.app/Contents/MacOS | Platform: cocoa | System Locale: en_NL"
+    validations:
+      required: true
+  - type: dropdown
+    id: jasp-module
+    attributes:
+      label: JASP Module
+      description:  Is there a specific JASP module that caused the crash?
+      multiple: true
+      options:
+        - Unrelated
+        - Acceptance Sampling
+        - ANOVA
+        - Audit
+        - Bain
+        - Bayes Factor Functions
+        - BFpack
+        - Bsts
+        - Circular Statistics
+        - Cochrane Meta-Analyses
+        - Descriptives
+        - Distributions
+        - Equivalence T-Tests
+        - Factor
+        - Frequencies
+        - JAGS
+        - Learn Bayes
+        - Learn Stats
+        - Machine Learning
+        - Meta Analysis
+        - Mixed Models
+        - Network
+        - Power
+        - Predictive Analytics
+        - Process
+        - Prophet
+        - Quality Control
+        - Regression
+        - Reliability
+        - Robust T-Tests
+        - SEM
+        - Survival
+        - Summary Statistics
+        - T-Tests
+        - Time Series
+        - Visual Modeling
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: jasp-analysis
+    attributes:
+      label: Is there a specific analysis that caused the crash?
+      description: Please mention the name of the analysis or method that the causes the issue.
+      placeholder: "One Sample T-Test"
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: Log files
+      description:
+        Please upload your Log files by dropping them into the area below, and add any information notes if necessary.
+        
+        **Read our [Logging Guide](https://github.com/jasp-stats/jasp-desktop/blob/stable/Docs/user-guide/logging-howto.md) page to learn where to (and how to) find JASP log files.**
+    validations: 
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Please tell us what happened. Can you reproduce the crash? If so, please let us know what steps you take to reproduce this bug.
+        
+        Note: You can attach images or data by clicking this area to highlight it and then dragging files in. If you upload a JASP file, you need to compress your .jasp-file before uploading it to GitHub (aka as a .zip-file; for additional help, see https://jasp-stats.org/2018/03/29/request-feature-report-bug-jasp/). In addition, if you would prefer to not make your data publicly available, you can send your files directly to us, issues@jasp-stats.org.
+      value: |
+        1.
+        2.
+        3.
+        ...
+        
+    validations:
+      required: true
+
+

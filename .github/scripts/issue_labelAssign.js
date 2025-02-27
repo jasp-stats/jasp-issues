@@ -4,8 +4,6 @@ module.exports = async function ({github, context}, keywords) {
   // define an array of keyword triples, including the label and 
   // the maintainer to assign
 
-
-
   // get the issue info
   const issue = await github.rest.issues.get({
                         issue_number: context.issue.number,
@@ -27,8 +25,8 @@ module.exports = async function ({github, context}, keywords) {
   }
 
   // test if module keyword is in issue body
-  const regexModule1 = "\\#\\#\\# JASP Module\\s+,*.*("
-  const regexModule2 = ").*\\s+\\#\\#\\#";
+  const regexModule1 = "### (JASP Module|Is your feature request related to a JASP module\\?)\\s+,*.*(";
+  const regexModule2 = ").*\\s+###";
   for (const words of keywords.modules) {
     // create the regex to match with, case insensitive
     var regex = new RegExp(regexModule1 + words[0] + regexModule2, "i");
