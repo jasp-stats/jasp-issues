@@ -12,7 +12,7 @@ body:
     attributes:
       label: System Info
       description: Please fill the system information into this field. If you have arrived here via the crash reporter in JASP, this will be filled automatically. If not, go to JASP > About > Copy Debug Information.
-      placeholder: "JASP Version: 0.19.3 (Apple Silicon) | Build Branch: 0.19.3 | Build Date: Jan 3 2025 12:51:39 (Netherlands) | Last Commit: c8710df5442149527b0692cc1367ea5b3c982d04 | OS: macOS Sequoia 15.3 (darwin 24.3.0, arm64) | Install Path: /Applications/JASP.app/Contents/MacOS | Platform: cocoa | System Locale: en_NL"
+      placeholder: JASP Version: 0.19.3 (Apple Silicon) | Build Branch: 0.19.3 | Build Date: Jan 3 2025 12:51:39 (Netherlands) | Last Commit: c8710df5442149527b0692cc1367ea5b3c982d04 | OS: macOS Sequoia 15.3 (darwin 24.3.0, arm64) | Install Path: /Applications/JASP.app/Contents/MacOS | Platform: cocoa | System Locale: en_NL
     validations:
       required: true
   - type: dropdown
@@ -66,7 +66,7 @@ body:
     attributes:
       label: Is there a specific analysis that caused the crash?
       description: Please mention the name of the analysis or method that the causes the issue.
-      placeholder: "One Sample T-Test"
+      placeholder: One Sample T-Test
     validations:
       required: false
   - type: textarea
@@ -87,7 +87,7 @@ body:
         Please tell us what happened. Can you reproduce the crash? If so, please let us know what steps you take to reproduce this bug.
         
         Note: You can attach images or data by clicking this area to highlight it and then dragging files in. If you upload a JASP file, you need to compress your .jasp-file before uploading it to GitHub (aka as a .zip-file; for additional help, see https://jasp-stats.org/2018/03/29/request-feature-report-bug-jasp/). In addition, if you would prefer to not make your data publicly available, you can send your files directly to us, issues@jasp-stats.org.
-      value: |
+      placeholder: |
         1.
         2.
         3.
