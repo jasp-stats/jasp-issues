@@ -12,7 +12,7 @@ body:
     attributes:
       label: System Info
       description: Please fill the system information into this field. If you have arrived here via the crash reporter in JASP, this will be filled automatically. If not, go to JASP > About > Copy Debug Information.
-      placeholder: "JASP Version: 0.19.3 (Apple Silicon) | Build Branch: 0.19.3 | Build Date: Jan 3 2025 12:51:39 (Netherlands) | Last Commit: c8710df5442149527b0692cc1367ea5b3c982d04 | OS: macOS Sequoia 15.3 (darwin 24.3.0, arm64) | Install Path: /Applications/JASP.app/Contents/MacOS | Platform: cocoa | System Locale: en_NL"
+      placeholder: JASP Version: 0.19.3 (Apple Silicon) | Build Branch: 0.19.3 | Build Date: Jan 3 2025 12:51:39 (Netherlands) | Last Commit: c8710df5442149527b0692cc1367ea5b3c982d04 | OS: macOS Sequoia 15.3 (darwin 24.3.0, arm64) | Install Path: /Applications/JASP.app/Contents/MacOS | Platform: cocoa | System Locale: en_NL
     validations:
       required: true
   - type: dropdown
