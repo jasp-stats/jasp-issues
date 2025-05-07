@@ -24,40 +24,37 @@ module.exports = async function ({github, context}, keywords) {
     assigneeNames.push(assignee.login);
   }
 
-  // test if module keyword is in issue body
-  const regexModule1 = "### (JASP Module|Is your feature request related to a JASP module\\?)\\s+,*.*(";
-  const regexModule2 = ").*\\s+###";
-  for (const words of keywords.modules) {
-    // create the regex to match with, case insensitive
-    var regex = new RegExp(regexModule1 + words[0] + regexModule2, "i");
-    let found = regex.test(body);
+  // Extract the answer(s) to the module question
+  const match = body.match(/### (JASP Module|Is your feature request related to a JASP module\?)\s*\n+(.+?)\s*(\n|$)/i);
 
-    // label and assign someone
-    if (found) {
-      // checks if there is actually a label specified in the keywords
-      if (words[1].length > 0) {
-        github.rest.issues.addLabels({
-          issue_number: context.issue.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          labels: [
-            words[1]
-          ]
-        });
-      }
-      // checks if there is actually an assignee specified in the keywords
-      if (words[2].length > 0) {
-        github.rest.issues.addAssignees({
-          issue_number: context.issue.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          assignees: [
-            words[2]
-          ]
-        });
+  if (match && match[2]) {
+    const rawAnswers = match[2].split(/[,;\n]/).map(ans => ans.trim().toLowerCase());
+    const uniqueAnswers = [...new Set(rawAnswers)];
+
+    for (const [keyword, label, assignee] of keywords.modules) {
+      const keywordLower = keyword.toLowerCase();
+
+      if (uniqueAnswers.includes(keywordLower)) {
+        if (label) {
+          await github.rest.issues.addLabels({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            labels: [label]
+          });
+        }
+        if (assignee) {
+          await github.rest.issues.addAssignees({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            assignees: [assignee]
+          });
+        }
       }
     }
   }
+
 
   const regexOS1 = "\\#\\#\\# What OS are you seeing the problem on\\?\\s+,*.*(";
   const regexOS2 = ").*\\s+\\#\\#\\#";
