@@ -16,7 +16,7 @@ module.exports = function () {
       ["Descriptives","Module: jaspDescriptives", "vandenman"],
       ["Distributions","Module: jaspDistributions", "Kucharssim"],
       ["Equivalence T-Tests","Module: jaspEquivalenceTTests", "Jillderon"],
-      ["ESCI", "Module: jaspEsci", "matyasbukva"],
+      ["ESCI", "Module: jaspEsci", "rcalinjageman"],
       ["Factor","Module: jaspFactor", "juliuspfadt"],
       ["Frequencies","Module: jaspFrequencies", "FBartos"],
       ["JAGS", "Module: jaspJags", "vandenman"],
