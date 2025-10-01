@@ -13,6 +13,7 @@ body:
       label: JASP Version
       description: What version of JASP are you running?
       options:
+        - 0.95.3
         - 0.95.2
         - 0.95.1
         - 0.95.0
