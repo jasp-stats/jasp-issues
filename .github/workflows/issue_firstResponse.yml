@@ -4,27 +4,27 @@
 name: First Response
 on:
   issues:
-    types: 
+    types:
       - opened
 
 jobs:
   First-response-bug:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: ${{ contains(github.event.issue.labels.*.name, 'Bug') }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/github-script@v6
+      - uses: actions/checkout@v6
+      - uses: actions/github-script@v8
         with:
           script: |
             const script = require('./.github/scripts/bug_firstResponse.js');
             script({github, context});
-  
+
   First-response-crash:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: ${{ contains(github.event.issue.labels.*.name, 'Crash') }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/github-script@v6
+      - uses: actions/checkout@v6
+      - uses: actions/github-script@v8
         with:
           script: |
             const script = require('./.github/scripts/crash_firstResponse.js');
