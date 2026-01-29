@@ -15,7 +15,7 @@ module.exports = function () {
       ["Cochrane Meta-Analyses", "Module: jaspCochrane", "FBartos"],
       ["Descriptives","Module: jaspDescriptives", "vandenman"],
       ["Distributions","Module: jaspDistributions", "Kucharssim"],
-      ["Equivalence T-Tests","Module: jaspEquivalenceTTests", "Jillderon"],
+      ["Equivalence T-Tests","Module: jaspEquivalenceTTests", "FBartos"],
       ["ESCI", "Module: jaspEsci", "rcalinjageman"],
       ["Factor","Module: jaspFactor", "juliuspfadt"],
       ["Frequencies","Module: jaspFrequencies", "FBartos"],
