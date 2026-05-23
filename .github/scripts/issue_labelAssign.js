@@ -55,7 +55,6 @@ module.exports = async function ({github, context}, keywords) {
     }
   }
 
-
   const regexOS1 = "\\#\\#\\# What OS are you seeing the problem on\\?\\s+,*.*(";
   const regexOS2 = ").*\\s+\\#\\#\\#";
   // test if OS keyword is in issue body
