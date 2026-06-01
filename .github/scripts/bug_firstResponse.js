@@ -16,8 +16,10 @@ module.exports = async function ({github, context}) {
       + issue.data.html_url +
       ", attaching to an email does not work) a screenshot showcasing the problem, and/or \
       a compressed (zipped) .jasp file or the data file \
-      that causes the issue. If you would prefer not to make your \
-      data publicly available, you can send your file(s) directly to us,\
+      that causes the issue. If you don't want your JASP file to be  \
+      publicly available, you can encrypt your JASP file (when saving it) and use \
+      the 'JASP Team Submission' mode so that we can read it. \
+      Ultimately you can send your file(s) directly to us,\
       issues@jasp-stats.org";
 
     github.rest.issues.createComment({
